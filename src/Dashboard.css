@@ -1,0 +1,11 @@
+.dashboard-grid {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    /*padding-bottom: 10px;*/
+    /*width: 20%;*/
+    height: 100%;
+}

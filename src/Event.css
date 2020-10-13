@@ -1,0 +1,22 @@
+.event-wrapper {
+    box-shadow: 2px 2px 10px lightblue;
+    text-align: center;
+    padding: 0px;
+    /*height: 100%;*/
+    border-radius: 5px;
+}
+
+.event-event {
+    background-color: lightblue;
+    border: 1px lightblue solid;
+}
+
+.event-other {
+    background-color: lightgreen;
+}
+
+.event-none {
+    /*visibility: hidden;*/
+    background-color: #bfefff;
+    color: #bfefff;
+}
