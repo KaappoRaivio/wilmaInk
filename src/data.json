@@ -1,356 +1,356 @@
 {
-  "courses": {
-    "MAA18.1": {
-      "title": "MAA18.1",
-      "teacher": "KAA",
-      "homework": [],
-      "lesson_diary": []
-    },
-    "MAA07.D2": {
-      "title": "MAA07.D2",
-      "teacher": "SAV",
-      "homework": [
-        {
-          "given_on": "2020-10-08",
-          "homework": "134, 140, 148"
-        },
-        {
-          "given_on": "2020-10-06",
-          "homework": "109, 115, 118, 119, 120"
-        },
-        {
-          "given_on": "2020-10-05",
-          "homework": "Yhdistetty funktio moniste classroomissa t. 3 ja 5 sekä kirjasta 401, 404, 415"
-        }
-      ],
-      "lesson_diary": [
-        {
-          "lesson_number": "",
-          "lesson_topic": "",
-          "date": "2020-10-08"
-        },
-        {
-          "lesson_number": "",
-          "lesson_topic": "",
-          "date": "2020-10-06"
-        },
-        {
-          "lesson_number": "",
-          "lesson_topic": "",
-          "date": "2020-10-05"
-        }
-      ]
-    },
-    "FY10.D2": {
-      "title": "FY10.D2",
-      "teacher": "MAK",
-      "homework": [],
-      "lesson_diary": []
-    },
-    "KE06.D2": {
-      "title": "KE06.D2",
-      "teacher": "HON",
-      "homework": [
-        {
-          "given_on": "2020-10-09",
-          "homework": "Classroom-koodi: 4qj54za Tunnin korvaava tehtävä löytyy Classroomista! (jos olit poissa)"
-        },
-        {
-          "given_on": "2020-10-08",
-          "homework": "Classroom-koodi: 4qj54za Tunnin korvaava tehtävä löytyy Classroomista! (jos olit poissa)"
-        }
-      ],
-      "lesson_diary": [
-        {
-          "lesson_number": "",
-          "lesson_topic": "Tuntemattomat jauheet",
-          "date": "2020-10-09"
-        },
-        {
-          "lesson_number": "",
-          "lesson_topic": "Maissinjyvän höyrynpaine",
-          "date": "2020-10-08"
-        }
-      ]
-    },
-    "UE02.3": {
-      "title": "UE02.3",
-      "teacher": "KAE",
-      "homework": [
-        {
-          "given_on": "2020-10-09",
-          "homework": "Kpl 2.2 tehtävä EK1"
-        },
-        {
-          "given_on": "2020-10-07",
-          "homework": "Kpl 2.1 tehtävä EK1"
-        },
-        {
-          "given_on": "2020-10-06",
-          "homework": "Kpl 1 tehtävä EK1"
-        }
-      ],
-      "lesson_diary": [
-        {
-          "lesson_number": "3",
-          "lesson_topic": "Keskiajan kristillisyys",
-          "date": "2020-10-09"
-        },
-        {
-          "lesson_number": "2",
-          "lesson_topic": "Kristinuskon synty ja varhaisvaiheet",
-          "date": "2020-10-07"
-        },
-        {
-          "lesson_number": "1",
-          "lesson_topic": "Aloitus",
-          "date": "2020-10-06"
-        }
-      ]
-    },
-    "ENA04.7": {
-      "title": "ENA04.7",
-      "teacher": "PiV",
-      "homework": [
-        {
-          "given_on": "2020-10-09",
-          "homework": "Topic 1 exercise 1f (translation sentences). Grammar/Nationality words exercise 36 (found in the GRAMMAR section of your book)."
-        },
-        {
-          "given_on": "2020-10-08",
-          "homework": "Topic 1: Exercises 1b and 1c."
-        },
-        {
-          "given_on": "2020-10-06",
-          "homework": "Exercise 3 \"Fill in the missing words\" in section \"Learning to learn\" / \"4. Using signposts \"(this section can be found after the texts in your digital book, before the Grammar section). Page 130 in the paperback book."
-        }
-      ],
-      "lesson_diary": [
-        {
-          "lesson_number": "",
-          "lesson_topic": "Topic 1 exercises 1e, 1h. Vocabulary revision 1.1. Grammar: Nationality words + exercise 34.",
-          "date": "2020-10-09"
-        },
-        {
-          "lesson_number": "",
-          "lesson_topic": "Topic 1 engage discussion. Text 1 vocabulary, listen + translate + exercise 1a.",
-          "date": "2020-10-08"
-        },
-        {
-          "lesson_number": "",
-          "lesson_topic": "Course introduction (material in Google Classroom). Using Signposts (digital book Learning to learn/4.Using signposts, paperback book p. 128-129) + exercises 2 & 5. Charity work discussion (material in Google Classroom).",
-          "date": "2020-10-06"
-        }
-      ]
-    }
-  },
-  "teachers": {
-    "KAA": {
-      "long_name": "",
-      "short_name": "KAA",
-      "role": "",
-      "email": ""
-    },
-    "SAV": {
-      "long_name": "",
-      "short_name": "SAV",
-      "role": "",
-      "email": ""
-    },
-    "MAK": {
-      "long_name": "",
-      "short_name": "MAK",
-      "role": "",
-      "email": ""
-    },
-    "HON": {
-      "long_name": "",
-      "short_name": "HON",
-      "role": "",
-      "email": ""
-    },
-    "KAE": {
-      "long_name": "",
-      "short_name": "KAE",
-      "role": "",
-      "email": ""
-    },
-    "PiV": {
-      "long_name": "",
-      "short_name": "PiV",
-      "role": "",
-      "email": ""
-    }
-  },
-  "upcoming": [
-    {
-      "date": "2020-10-19",
-      "events": [
-        {
-          "type": "lesson",
-          "start_time": "10:00",
-          "end_time": "11:15",
-          "course": "MAA18.1",
-          "room": "2240",
-          "nth_lesson": 1
-        },
-        {
-          "type": "lesson",
-          "start_time": "11:20",
-          "end_time": "13:15",
-          "course": "MAA07.D2",
-          "room": "1317",
-          "nth_lesson": 2
-        },
-        {
-          "type": "lesson",
-          "start_time": "13:30",
-          "end_time": "14:45",
-          "course": "FY10.D2",
-          "room": "1317",
-          "nth_lesson": 3
-        }
-      ]
-    },
-    {
-      "date": "2020-10-20",
-      "events": [
-        {
-          "type": "lesson",
-          "start_time": "8:30",
-          "end_time": "9:45",
-          "course": "KE06.D2",
-          "room": "2313",
-          "nth_lesson": 0
-        },
-        {
-          "type": "lesson",
-          "start_time": "10:00",
-          "end_time": "11:15",
-          "course": "MAA07.D2",
-          "room": "1317",
-          "nth_lesson": 1
-        },
-        {
-          "type": "lesson",
-          "start_time": "11:20",
-          "end_time": "13:15",
-          "course": "UE02.3",
-          "room": "1118",
-          "nth_lesson": 2
-        },
-        {
-          "type": "lesson",
-          "start_time": "13:30",
-          "end_time": "14:45",
-          "course": "ENA04.7",
-          "room": "2240",
-          "nth_lesson": 3
-        }
-      ]
-    },
-    {
-      "date": "2020-10-21",
-      "events": [
-        {
-          "type": "lesson",
-          "start_time": "8:30",
-          "end_time": "9:45",
-          "course": "UE02.3",
-          "room": "1118",
-          "nth_lesson": 0
-        },
-        {
-          "type": "lesson",
-          "start_time": "11:20",
-          "end_time": "13:15",
-          "course": "MAA18.1",
-          "room": "2240",
-          "nth_lesson": 2
-        },
-        {
-          "type": "lesson",
-          "start_time": "13:30",
-          "end_time": "14:45",
-          "course": "FY10.D2",
-          "room": "1317",
-          "nth_lesson": 3
-        }
-      ]
-    },
-    {
-      "date": "2020-10-22",
-      "events": [
-        {
-          "type": "lesson",
-          "start_time": "8:30",
-          "end_time": "9:45",
-          "course": "KE06.D2",
-          "room": "2313",
-          "nth_lesson": 0
-        },
-        {
-          "type": "lesson",
-          "start_time": "10:00",
-          "end_time": "11:15",
-          "course": "MAA07.D2",
-          "room": "1317",
-          "nth_lesson": 1
-        },
-        {
-          "type": "lesson",
-          "start_time": "13:30",
-          "end_time": "14:45",
-          "course": "ENA04.7",
-          "room": "2240",
-          "nth_lesson": 3
-        },
-        {
-          "type": "lesson",
-          "start_time": "15:00",
-          "end_time": "16:15",
-          "course": "MAA18.1",
-          "room": "2240",
-          "nth_lesson": 4
-        }
-      ]
-    },
-    {
-      "date": "2020-10-23",
-      "events": [
-        {
-          "type": "lesson",
-          "start_time": "8:30",
-          "end_time": "9:45",
-          "course": "ENA04.7",
-          "room": "2240",
-          "nth_lesson": 0
-        },
-        {
-          "type": "lesson",
-          "start_time": "10:00",
-          "end_time": "11:15",
-          "course": "UE02.3",
-          "room": "1118",
-          "nth_lesson": 1
-        },
-        {
-          "type": "lesson",
-          "start_time": "11:20",
-          "end_time": "13:15",
-          "course": "FY10.D2",
-          "room": "1317",
-          "nth_lesson": 2
-        },
-        {
-          "type": "lesson",
-          "start_time": "13:30",
-          "end_time": "14:45",
-          "course": "KE06.D2",
-          "room": "2313",
-          "nth_lesson": 3
-        }
-      ]
-    }
-  ]
+	"courses": {
+		"MAA18.1": {
+			"title": "MAA18.1",
+			"teacher": "KAA",
+			"homework": [],
+			"lesson_diary": []
+		},
+		"MAA07.D2": {
+			"title": "MAA07.D2",
+			"teacher": "SAV",
+			"homework": [
+				{
+					"given_on": "2020-10-08",
+					"homework": "134, 140, 148"
+				},
+				{
+					"given_on": "2020-10-06",
+					"homework": "109, 115, 118, 119, 120"
+				},
+				{
+					"given_on": "2020-10-05",
+					"homework": "Yhdistetty funktio moniste classroomissa t. 3 ja 5 sekä kirjasta 401, 404, 415"
+				}
+			],
+			"lesson_diary": [
+				{
+					"lesson_number": "",
+					"lesson_topic": "",
+					"date": "2020-10-08"
+				},
+				{
+					"lesson_number": "",
+					"lesson_topic": "",
+					"date": "2020-10-06"
+				},
+				{
+					"lesson_number": "",
+					"lesson_topic": "",
+					"date": "2020-10-05"
+				}
+			]
+		},
+		"FY10.D2": {
+			"title": "FY10.D2",
+			"teacher": "MAK",
+			"homework": [],
+			"lesson_diary": []
+		},
+		"KE06.D2": {
+			"title": "KE06.D2",
+			"teacher": "HON",
+			"homework": [
+				{
+					"given_on": "2020-10-09",
+					"homework": "Classroom-koodi: 4qj54za Tunnin korvaava tehtävä löytyy Classroomista! (jos olit poissa)"
+				},
+				{
+					"given_on": "2020-10-08",
+					"homework": "Classroom-koodi: 4qj54za Tunnin korvaava tehtävä löytyy Classroomista! (jos olit poissa)"
+				}
+			],
+			"lesson_diary": [
+				{
+					"lesson_number": "",
+					"lesson_topic": "Tuntemattomat jauheet",
+					"date": "2020-10-09"
+				},
+				{
+					"lesson_number": "",
+					"lesson_topic": "Maissinjyvän höyrynpaine",
+					"date": "2020-10-08"
+				}
+			]
+		},
+		"UE02.3": {
+			"title": "UE02.3",
+			"teacher": "KAE",
+			"homework": [
+				{
+					"given_on": "2020-10-09",
+					"homework": "Kpl 2.2 tehtävä EK1"
+				},
+				{
+					"given_on": "2020-10-07",
+					"homework": "Kpl 2.1 tehtävä EK1"
+				},
+				{
+					"given_on": "2020-10-06",
+					"homework": "Kpl 1 tehtävä EK1"
+				}
+			],
+			"lesson_diary": [
+				{
+					"lesson_number": "3",
+					"lesson_topic": "Keskiajan kristillisyys",
+					"date": "2020-10-09"
+				},
+				{
+					"lesson_number": "2",
+					"lesson_topic": "Kristinuskon synty ja varhaisvaiheet",
+					"date": "2020-10-07"
+				},
+				{
+					"lesson_number": "1",
+					"lesson_topic": "Aloitus",
+					"date": "2020-10-06"
+				}
+			]
+		},
+		"ENA04.7": {
+			"title": "ENA04.7",
+			"teacher": "PiV",
+			"homework": [
+				{
+					"given_on": "2020-10-09",
+					"homework": "Topic 1 exercise 1f (translation sentences). Grammar/Nationality words exercise 36 (found in the GRAMMAR section of your book)."
+				},
+				{
+					"given_on": "2020-10-08",
+					"homework": "Topic 1: Exercises 1b and 1c."
+				},
+				{
+					"given_on": "2020-10-06",
+					"homework": "Exercise 3 \"Fill in the missing words\" in section \"Learning to learn\" / \"4. Using signposts \"(this section can be found after the texts in your digital book, before the Grammar section). Page 130 in the paperback book."
+				}
+			],
+			"lesson_diary": [
+				{
+					"lesson_number": "",
+					"lesson_topic": "Topic 1 exercises 1e, 1h. Vocabulary revision 1.1. Grammar: Nationality words + exercise 34.",
+					"date": "2020-10-09"
+				},
+				{
+					"lesson_number": "",
+					"lesson_topic": "Topic 1 engage discussion. Text 1 vocabulary, listen + translate + exercise 1a.",
+					"date": "2020-10-08"
+				},
+				{
+					"lesson_number": "",
+					"lesson_topic": "Course introduction (material in Google Classroom). Using Signposts (digital book Learning to learn/4.Using signposts, paperback book p. 128-129) + exercises 2 & 5. Charity work discussion (material in Google Classroom).",
+					"date": "2020-10-06"
+				}
+			]
+		}
+	},
+	"teachers": {
+		"KAA": {
+			"long_name": "",
+			"short_name": "KAA",
+			"role": "",
+			"email": ""
+		},
+		"SAV": {
+			"long_name": "",
+			"short_name": "SAV",
+			"role": "",
+			"email": ""
+		},
+		"MAK": {
+			"long_name": "",
+			"short_name": "MAK",
+			"role": "",
+			"email": ""
+		},
+		"HON": {
+			"long_name": "",
+			"short_name": "HON",
+			"role": "",
+			"email": ""
+		},
+		"KAE": {
+			"long_name": "",
+			"short_name": "KAE",
+			"role": "",
+			"email": ""
+		},
+		"PiV": {
+			"long_name": "",
+			"short_name": "PiV",
+			"role": "",
+			"email": ""
+		}
+	},
+	"upcoming": [
+		{
+			"date": "2020-10-19",
+			"events": [
+				{
+					"type": "lesson",
+					"start_time": "10:00",
+					"end_time": "11:15",
+					"course": "MAA18.1",
+					"room": "2240",
+					"nth_lesson": 1
+				},
+				{
+					"type": "lesson",
+					"start_time": "11:20",
+					"end_time": "13:15",
+					"course": "MAA07.D2",
+					"room": "1317",
+					"nth_lesson": 2
+				},
+				{
+					"type": "lesson",
+					"start_time": "13:30",
+					"end_time": "14:45",
+					"course": "FY10.D2",
+					"room": "1317",
+					"nth_lesson": 3
+				}
+			]
+		},
+		{
+			"date": "2020-10-20",
+			"events": [
+				{
+					"type": "lesson",
+					"start_time": "8:30",
+					"end_time": "9:45",
+					"course": "KE06.D2",
+					"room": "2313",
+					"nth_lesson": 0
+				},
+				{
+					"type": "lesson",
+					"start_time": "10:00",
+					"end_time": "11:15",
+					"course": "MAA07.D2",
+					"room": "1317",
+					"nth_lesson": 1
+				},
+				{
+					"type": "lesson",
+					"start_time": "11:20",
+					"end_time": "13:15",
+					"course": "UE02.3",
+					"room": "1118",
+					"nth_lesson": 2
+				},
+				{
+					"type": "lesson",
+					"start_time": "13:30",
+					"end_time": "14:45",
+					"course": "ENA04.7",
+					"room": "2240",
+					"nth_lesson": 3
+				}
+			]
+		},
+		{
+			"date": "2020-10-21",
+			"events": [
+				{
+					"type": "lesson",
+					"start_time": "8:30",
+					"end_time": "9:45",
+					"course": "UE02.3",
+					"room": "1118",
+					"nth_lesson": 0
+				},
+				{
+					"type": "lesson",
+					"start_time": "11:20",
+					"end_time": "13:15",
+					"course": "MAA18.1",
+					"room": "2240",
+					"nth_lesson": 2
+				},
+				{
+					"type": "lesson",
+					"start_time": "13:30",
+					"end_time": "14:45",
+					"course": "FY10.D2",
+					"room": "1317",
+					"nth_lesson": 3
+				}
+			]
+		},
+		{
+			"date": "2020-10-22",
+			"events": [
+				{
+					"type": "lesson",
+					"start_time": "8:30",
+					"end_time": "9:45",
+					"course": "KE06.D2",
+					"room": "2313",
+					"nth_lesson": 0
+				},
+				{
+					"type": "lesson",
+					"start_time": "10:00",
+					"end_time": "11:15",
+					"course": "MAA07.D2",
+					"room": "1317",
+					"nth_lesson": 1
+				},
+				{
+					"type": "lesson",
+					"start_time": "13:30",
+					"end_time": "14:45",
+					"course": "ENA04.7",
+					"room": "2240",
+					"nth_lesson": 3
+				},
+				{
+					"type": "lesson",
+					"start_time": "15:00",
+					"end_time": "16:15",
+					"course": "MAA18.1",
+					"room": "2240",
+					"nth_lesson": 4
+				}
+			]
+		},
+		{
+			"date": "2020-10-23",
+			"events": [
+				{
+					"type": "lesson",
+					"start_time": "8:30",
+					"end_time": "9:45",
+					"course": "ENA04.7",
+					"room": "2240",
+					"nth_lesson": 0
+				},
+				{
+					"type": "lesson",
+					"start_time": "10:00",
+					"end_time": "11:15",
+					"course": "UE02.3",
+					"room": "1118",
+					"nth_lesson": 1
+				},
+				{
+					"type": "lesson",
+					"start_time": "11:20",
+					"end_time": "13:15",
+					"course": "FY10.D2",
+					"room": "1317",
+					"nth_lesson": 2
+				},
+				{
+					"type": "lesson",
+					"start_time": "13:30",
+					"end_time": "14:45",
+					"course": "KE06.D2",
+					"room": "2313",
+					"nth_lesson": 3
+				}
+			]
+		}
+	]
 }

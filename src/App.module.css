@@ -1,0 +1,18 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 10px;
+}
+
+.dateTitle {
+	flex: 1 1 0%;
+	margin-left: 2px;
+	font-size: 1.2em;
+	margin-bottom: 5px;
+	font-weight: bolder;
+}
+
+.dashboard {
+	flex: 1 1 70%;
+}
