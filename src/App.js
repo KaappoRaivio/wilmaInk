@@ -5,6 +5,32 @@ import data from "./data.json";
 import Column from "./Column";
 import Event from "./Event";
 
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+
+i18n
+    .use(initReactI18next) // passes i18n down to react-i18next
+    .init({
+        resources: {
+            en: {
+                translation: {
+                    "no_homework": "No homework marked"
+                }
+            },
+            fi: {
+                translation: {
+                    "no_homework": "Ei merkittyjä läksyjä"
+                }
+            }
+        },
+        lng: "fi",
+        fallbackLng: "en",
+
+        interpolation: {
+            escapeValue: false
+        }
+    });
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -18,7 +44,8 @@ class App extends Component {
 
 
     componentDidMount() {
-        fetch("http://192.168.1.100:8080")
+        // fetch("http://192.168.1.100:8080")
+        fetch("http://raivio.dy.fi:8080")
             .then(res => {
                 console.log(res.status)
                 return res.json();
