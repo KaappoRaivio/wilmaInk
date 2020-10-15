@@ -3,7 +3,7 @@
 }
 
 body {
-	font-size: min(7vh, 7 * 0.42vw);
+	font-size: min(7vh, calc(7 * 0.42vw));
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
 		sans-serif;

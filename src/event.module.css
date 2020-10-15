@@ -1,20 +1,13 @@
-.wrapper {
-	display: flex;
-}
-
 .event {
 	background-color: lightblue;
-	border: 1px lightblue solid;
-}
-
-.other {
-	background-color: lightgreen;
 }
 
 .none {
 	/*visibility: hidden;*/
 	background-color: #bfefff;
 	color: #bfefff;
+	box-shadow: 0px 0px 2px 1px #bfefff !important;
+
 }
 
 .border {
@@ -22,24 +15,22 @@
 	justify-self: center;
 }
 
+
 .course {
-	box-shadow: 2px 2px 10px lightblue;
+	width: 100%;
+	box-shadow: 0px 0px 2px 1px lightblue;
 	text-align: center;
-	padding: 0px;
-	/*height: 100%;*/
 	border-radius: 5px;
-	flex: 0 0 20%;
-	display: flex;
 	justify-content: center;
 	align-items: center;
+	display: flex;
 }
 
 .homework {
-	display: flex;
 	justify-content: left;
 	align-items: flex-start;
-	padding-left: 2%;
-	padding-top: 1%;
-	font-size: 80%;
-	flex: 1 1 80%;
+	font-size: 60%;
+	text-overflow: ellipsis;
+	white-space: pre-wrap;
+	overflow: hidden;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import Event from "./Event";
+import Row from "./Row";
 
 const Column = ({ children }) => {
 	// let events = [...Array(5).fill(0)].map(_ => <Event type={"empty"} />)
