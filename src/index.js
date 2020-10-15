@@ -16,7 +16,7 @@ i18n.use(initReactI18next) // passes i18n down to react-i18next
 				translation: {
 					no_homework: "No homework marked",
 					no_lesson_diary: "No entries in lesson diary",
-					homework: "Homrwork",
+					homework: "Homework",
 					lesson_diary: "Lesson diary",
 					weekday_0: "Sun",
 					weekday_1: "Mon",
@@ -51,14 +51,14 @@ i18n.use(initReactI18next) // passes i18n down to react-i18next
 		},
 	});
 
+const onLanguageChanged = newLanguage => {
+	i18n.changeLanguage(newLanguage);
+};
+
 ReactDOM.render(
 	<React.StrictMode>
-		{/*<Dashboard data={data}/>*/}
 		<div style={{ width: "100vw", height: "100vh" }}>
-			{/*<Column column={data[1].upcoming["2020-10-19"]} />*/}
-			{/*{withTranslation("default")(<App />)}*/}
-			<App />
-			{/*<App />*/}
+			<App onLanguageChanged={onLanguageChanged} />
 		</div>
 	</React.StrictMode>,
 	document.getElementById("root")

@@ -2,10 +2,10 @@ import React from "react";
 import Row from "./Row";
 import styles from "./event.module.css";
 import { useTranslation } from "react-i18next";
+import FormattedDate from "./FormattedDate";
 
 const Event = ({ type, course, room, courseDetails }) => {
 	const { t } = useTranslation();
-	console.log(courseDetails);
 
 	return (
 		<Row type={type} course={course} room={room} courseDetails={courseDetails}>
@@ -24,14 +24,30 @@ const Event = ({ type, course, room, courseDetails }) => {
 			)}
 			{type !== "empty" && (
 				<div className={styles.homework}>
-					{courseDetails.homework.length ? courseDetails.homework[0].homework : t("no_homework")}
+					{courseDetails.homework.length ? (
+						<>
+							<b>
+								<FormattedDate date={new Date(courseDetails.homework[0].given_on)} />
+							</b>
+							{`: ${courseDetails.homework[0].homework}`}
+						</>
+					) : (
+						t("no_homework")
+					)}
 				</div>
 			)}
 			{type !== "empty" && (
 				<div className={styles.homework}>
-					{courseDetails.lesson_diary.length
-						? courseDetails.lesson_diary[0].lesson_topic
-						: t("no_lesson_diary")}
+					{courseDetails.lesson_diary.length ? (
+						<>
+							<b>
+								<FormattedDate date={new Date(courseDetails.lesson_diary[0].date)} />
+							</b>
+							{`: ${courseDetails.lesson_diary[0].lesson_topic}`}
+						</>
+					) : (
+						t("no_lesson_diary")
+					)}
 				</div>
 			)}
 		</Row>

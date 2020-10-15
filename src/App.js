@@ -19,7 +19,6 @@ const getNextWeekDay = () => {
 		// while date is not weekday
 		currentDate.setDate(currentDate.getDate() + 1); // advance by one
 	}
-	console.log(currentDate);
 	return currentDate;
 };
 
@@ -27,7 +26,11 @@ const convertSunday = weekday => {
 	return (weekday + 6) % 7;
 };
 
-const App = props => {
+const getLanguage = () => {
+	return new URL(window.location.href).searchParams.get("lang");
+};
+
+const App = ({ onLanguageChanged }) => {
 	const [isLoading, setLoading] = useState(true);
 	const [data, setData] = useState(null);
 	const [currentDate, setCurrentDate] = useState(getNextWeekDay());
@@ -40,12 +43,12 @@ const App = props => {
 				return res.json();
 			})
 			.then(data => {
-				console.log(data);
 				setData(data);
 				setLoading(false);
 			})
 			.catch(console.error);
-	});
+		onLanguageChanged(getLanguage());
+	}, []);
 
 	if (isLoading) {
 		return <>...</>;
