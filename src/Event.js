@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Row from "./Row";
-import styles from "./event.module.css";
+import styles from "./Event.module.css";
 import { useTranslation } from "react-i18next";
 import FormattedDate from "./FormattedDate";
+import AutoFitText from "./AutoFitText";
 
 const Event = ({ type, course, room, courseDetails }) => {
 	const { t } = useTranslation();
+
+	const [fontSizes, setFontSizes] = useState([]);
+	const [uniformFontSize, setUniformFontSize] = useState(null);
+
+	useEffect(() => {
+		if (fontSizes.length > 1) {
+			setUniformFontSize(Math.min(...fontSizes));
+		}
+	}, [fontSizes]);
+
+	const onFontSizeFound = fontSize => {
+		setFontSizes(prevState => prevState.concat(fontSize));
+	};
 
 	return (
 		<Row type={type} course={course} room={room} courseDetails={courseDetails}>
@@ -23,7 +37,11 @@ const Event = ({ type, course, room, courseDetails }) => {
 				</div>
 			)}
 			{type !== "empty" && (
-				<div className={styles.homework}>
+				<AutoFitText
+					initialFontSize={18}
+					className={styles.homework}
+					uniformFontSize={uniformFontSize}
+					onFontSizeFound={onFontSizeFound}>
 					{courseDetails.homework.length ? (
 						<>
 							<b>
@@ -34,21 +52,25 @@ const Event = ({ type, course, room, courseDetails }) => {
 					) : (
 						t("no_homework")
 					)}
-				</div>
+				</AutoFitText>
 			)}
 			{type !== "empty" && (
-				<div className={styles.homework}>
+				<AutoFitText
+					initialFontSize={18}
+					className={styles.homework}
+					uniformFontSize={uniformFontSize}
+					onFontSizeFound={onFontSizeFound}>
 					{courseDetails.lesson_diary.length ? (
 						<>
 							<b>
 								<FormattedDate date={new Date(courseDetails.lesson_diary[0].date)} />
 							</b>
-							{`: ${courseDetails.lesson_diary[0].lesson_topic}`}
+							{`: ${courseDetails.lesson_diary[0].lesson_topic}`}{" "}
 						</>
 					) : (
 						t("no_lesson_diary")
 					)}
-				</div>
+				</AutoFitText>
 			)}
 		</Row>
 	);

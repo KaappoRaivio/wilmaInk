@@ -38,8 +38,9 @@
 .homework {
 	justify-content: left;
 	align-items: flex-start;
-	font-size: 60%;
-	text-overflow: ellipsis;
-	white-space: pre-wrap;
-	overflow: hidden;
+	font-size: 300%;
+	height: 100%;
+	/*text-overflow: ellipsis;*/
+	/*white-space: pre-wrap;*/
+	/*overflow: hidden;*/
 }

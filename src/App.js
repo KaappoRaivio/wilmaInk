@@ -14,7 +14,7 @@ import Row from "./Row";
 
 const getNextWeekDay = () => {
 	let currentDate = new Date();
-	currentDate.setDate(currentDate.getDate() + 1);
+	currentDate.setDate(currentDate.getDate() + 0);
 	while (!((currentDate.getDay() + 6) % 7 < 5)) {
 		// while date is not weekday
 		currentDate.setDate(currentDate.getDate() + 1); // advance by one
@@ -62,12 +62,9 @@ const App = ({ onLanguageChanged }) => {
 						<div>{t("lesson_diary")}</div>
 					</Row>
 				</div>
-				<Dashboard
-					className={styles.dashboard}
-					data={data}
-					dayOfWeek={convertSunday(currentDate.getDay())}
-					daysForward={0}
-				/>
+				<div className={styles.dashboard}>
+					<Dashboard data={data} dayOfWeek={convertSunday(currentDate.getDay())} daysForward={0} />
+				</div>
 			</div>
 		);
 	}

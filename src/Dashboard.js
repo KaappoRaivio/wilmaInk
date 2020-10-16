@@ -20,6 +20,7 @@ const Dashboard = ({ data, dayOfWeek, daysForward }) => {
 	}
 
 	return <div className="dashboard-grid">{<Column>{events}</Column>}</div>;
+	// return <Column>{events}</Column>;
 };
 
 Dashboard.propTypes = {};
