@@ -7,6 +7,7 @@ import AutoFitText from "./AutoFitText";
 
 const reducer = (state, fontSize) => {
 	const array = state.array.concat(fontSize);
+	console.log(array, fontSize);
 	if (array.length > 1) {
 		return { uniformFontSize: Math.min(...array), array };
 	} else {
@@ -46,6 +47,8 @@ const Event = ({ type, course, room, courseDetails }) => {
 								<FormattedDate date={new Date(courseDetails.homework[0].given_on)} />
 							</b>
 							{`: ${courseDetails.homework[0].homework}`}
+							Place the meatloaf in a wok, and toss fully with large crême fraîche.The great unknown is
+							full of totality.
 						</>
 					) : (
 						t("no_homework")
