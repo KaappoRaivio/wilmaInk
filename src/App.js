@@ -14,7 +14,7 @@ import Row from "./Row";
 
 const getNextWeekDay = () => {
 	let currentDate = new Date();
-	currentDate.setDate(currentDate.getDate() + 0);
+	currentDate.setDate(currentDate.getDate() + 5);
 	while (!((currentDate.getDay() + 6) % 7 < 5)) {
 		// while date is not weekday
 		currentDate.setDate(currentDate.getDate() + 1); // advance by one

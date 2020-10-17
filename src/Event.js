@@ -1,25 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import Row from "./Row";
 import styles from "./Event.module.css";
 import { useTranslation } from "react-i18next";
 import FormattedDate from "./FormattedDate";
 import AutoFitText from "./AutoFitText";
 
+const reducer = (state, fontSize) => {
+	const array = state.array.concat(fontSize);
+	if (array.length > 1) {
+		return { uniformFontSize: Math.min(...array), array };
+	} else {
+		return { uniformFontSize: null, array };
+	}
+};
+
 const Event = ({ type, course, room, courseDetails }) => {
 	const { t } = useTranslation();
 
-	const [fontSizes, setFontSizes] = useState([]);
-	const [uniformFontSize, setUniformFontSize] = useState(null);
-
-	useEffect(() => {
-		if (fontSizes.length > 1) {
-			setUniformFontSize(Math.min(...fontSizes));
-		}
-	}, [fontSizes]);
-
-	const onFontSizeFound = fontSize => {
-		setFontSizes(prevState => prevState.concat(fontSize));
-	};
+	const [{ uniformFontSize }, onFontSizeFound] = useReducer(reducer, { array: [], uniformFontSize: null });
 
 	return (
 		<Row type={type} course={course} room={room} courseDetails={courseDetails}>
