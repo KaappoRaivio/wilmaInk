@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./row.module.css";
+import styles from "./css/Row.module.css";
 
 const Row = props => {
 	return (

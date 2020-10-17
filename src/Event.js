@@ -1,6 +1,6 @@
-import React, { useEffect, useReducer, useState } from "react";
+import React, { useReducer } from "react";
 import Row from "./Row";
-import styles from "./Event.module.css";
+import styles from "./css/Event.module.css";
 import { useTranslation } from "react-i18next";
 import FormattedDate from "./FormattedDate";
 import AutoFitText from "./AutoFitText";
