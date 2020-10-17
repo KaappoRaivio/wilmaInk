@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Dashboard from "./Dashboard";
 import FormattedDate from "./FormattedDate";
 import { useTranslation } from "react-i18next";
@@ -9,9 +9,8 @@ import Row from "./Row";
 const getNextWeekDay = skipDays => {
 	let currentDate = new Date();
 	currentDate.setDate(currentDate.getDate() + 1 + skipDays);
-	while (!((currentDate.getDay() + 6) % 7 < 5)) {
-		// while date is not weekday
-		currentDate.setDate(currentDate.getDate() + 1); // advance by one
+	while (!(currentDate.getDay_correct() < 5)) {
+		currentDate.setDate(currentDate.getDate() + 1);
 	}
 	return currentDate;
 };
@@ -20,24 +19,25 @@ const convertSunday = weekday => {
 	return (weekday + 6) % 7;
 };
 
-const getUrlParams = () => {
-	let params = new URL(window.location.href).searchParams;
-	console.log(params, {
-		language: params.get("lang") || "fi",
-		skipDays: params.get("skipDays") || 0,
-	});
-	return {
-		language: params.get("lang") || "fi",
-		skipDays: parseInt(params.get("skipDays"), 10) || 0,
-	};
+// eslint-disable-next-line no-extend-native
+Date.prototype.getDay_correct = function () {
+	return convertSunday(this.getDay());
 };
 
-const App = ({ onLanguageChanged }) => {
-	const [isLoading, setLoading] = useState(true);
-	const [data, setData] = useState(null);
-	const [currentDate] = useState(getNextWeekDay(getUrlParams().skipDays));
+const useUrlParams = () => {
+	return useMemo(() => {
+		const params = new URL(window.location.href).searchParams;
+		return {
+			language: params.get("lang") || "fi",
+			date: getNextWeekDay(parseInt(params.get("skipDays"), 10) || 0),
+		};
+	}, []);
+};
 
-	const { t } = useTranslation();
+const useRequest = url => {
+	const [data, setData] = useState(null);
+	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState(null);
 
 	useEffect(() => {
 		fetch("http://raivio.dy.fi:8080")
@@ -45,27 +45,39 @@ const App = ({ onLanguageChanged }) => {
 				return res.json();
 			})
 			.then(data => {
+				console.log(data);
 				setData(data);
 				setLoading(false);
 			})
-			.catch(console.error);
-		onLanguageChanged(getUrlParams().language);
-	}, []);
+			.catch(setError);
+	}, [url]);
 
-	if (isLoading) {
+	return { data, loading, error };
+};
+
+const App = ({ onLanguageChanged }) => {
+	const { date, language } = useUrlParams();
+	const { data, loading, error } = useRequest("http://raivio.dy.fi:8080");
+	const { t } = useTranslation();
+
+	useEffect(() => onLanguageChanged(language), [language, onLanguageChanged]);
+
+	if (error) {
+		return <>{error.status}</>;
+	} else if (loading) {
 		return <>...</>;
 	} else {
 		return (
 			<div className={styles.wrapper}>
 				<div className={styles.dateTitle}>
 					<Row>
-						<FormattedDate date={currentDate} />
+						<FormattedDate date={date} />
 						<div>{t("homework")}</div>
 						<div>{t("lesson_diary")}</div>
 					</Row>
 				</div>
 				<div className={styles.dashboard}>
-					<Dashboard data={data} dayOfWeek={convertSunday(currentDate.getDay())} daysForward={0} />
+					<Dashboard data={data} dayOfWeek={date.getDay_correct()} daysForward={0} />
 				</div>
 			</div>
 		);

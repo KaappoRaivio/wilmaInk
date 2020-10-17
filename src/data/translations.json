@@ -5,13 +5,13 @@
 		"no_lesson_diary": "No entries in lesson diary",
 		"homework": "Homework",
 		"lesson_diary": "Lesson diary",
-		"weekday_0": "Sun",
-		"weekday_1": "Mon",
-		"weekday_2": "Tue",
-		"weekday_3": "Wed",
-		"weekday_4": "Thu",
-		"weekday_5": "Fri",
-		"weekday_6": "Sat"
+		"weekday_0": "Mon",
+		"weekday_1": "Tue",
+		"weekday_2": "Wed",
+		"weekday_3": "Thu",
+		"weekday_4": "Fri",
+		"weekday_5": "Sat",
+		"weekday_6": "Sun"
 	}
 },
 	"fi": {
@@ -20,13 +20,13 @@
 			"no_lesson_diary": "Ei merkintöjä tuntipäiväkirjassa",
 			"homework": "Läksyt",
 			"lesson_diary": "Tuntipäiväkirja",
-			"weekday_0": "su",
-			"weekday_1": "ma",
-			"weekday_2": "ti",
-			"weekday_3": "ke",
-			"weekday_4": "to",
-			"weekday_5": "pe",
-			"weekday_6": "la"
+			"weekday_0": "ma",
+			"weekday_1": "ti",
+			"weekday_2": "ke",
+			"weekday_3": "to",
+			"weekday_4": "pe",
+			"weekday_5": "la",
+			"weekday_6": "su"
 		}
 	}
 }

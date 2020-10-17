@@ -20,13 +20,19 @@ const Event = ({ type, course, room, courseDetails }) => {
 
 	const [{ uniformFontSize }, onFontSizeFound] = useReducer(reducer, { array: [], uniformFontSize: null });
 
-	return (
-		<Row type={type} course={course} room={room} courseDetails={courseDetails}>
-			{type === "empty" ? (
+	if (type === "empty") {
+		return (
+			<Row type={type} course={course} room={room} courseDetails={courseDetails}>
 				<div className={`${styles.none} ${styles.course}`}>
 					a<br />a
 				</div>
-			) : (
+				{false}
+				{false}
+			</Row>
+		);
+	} else {
+		return (
+			<Row type={type} course={course} room={room} courseDetails={courseDetails}>
 				<div className={`${styles.event} ${styles.course}`}>
 					<div className={styles.border}>
 						<b>{course}</b>
@@ -34,8 +40,6 @@ const Event = ({ type, course, room, courseDetails }) => {
 						{room} <i>{courseDetails.teacher}</i>
 					</div>
 				</div>
-			)}
-			{type !== "empty" && (
 				<AutoFitText
 					initialFontSize={18}
 					className={styles.homework}
@@ -52,8 +56,6 @@ const Event = ({ type, course, room, courseDetails }) => {
 						t("no_homework")
 					)}
 				</AutoFitText>
-			)}
-			{type !== "empty" && (
 				<AutoFitText
 					initialFontSize={18}
 					className={styles.homework}
@@ -70,9 +72,9 @@ const Event = ({ type, course, room, courseDetails }) => {
 						t("no_lesson_diary")
 					)}
 				</AutoFitText>
-			)}
-		</Row>
-	);
+			</Row>
+		);
+	}
 };
 
 Event.propTypes = {};

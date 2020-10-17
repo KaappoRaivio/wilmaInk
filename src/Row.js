@@ -4,10 +4,10 @@ import styles from "./css/Row.module.css";
 
 const Row = props => {
 	return (
-		<div className={styles.wrapper}>
-			<div className={`${styles.composition1}`}>{props.children[0]}</div>
-			<div className={`${styles.composition2}`}>{props.children[1]}</div>
-			<div className={`${styles.composition2}`}>{props.children[2]}</div>
+		<div className={styles.row}>
+			<div className={`${styles.column1}`}>{props.children[0]}</div>
+			<div className={`${styles.column2}`}>{props.children[1]}</div>
+			<div className={`${styles.column3}`}>{props.children[2]}</div>
 		</div>
 	);
 };

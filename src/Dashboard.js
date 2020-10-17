@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useMemo } from "react";
 import Column from "./Column";
 
-import "./Dashboard.css";
 import Event from "./Event";
 
-const Dashboard = ({ data, dayOfWeek, daysForward }) => {
+const getEvents = (data, dayOfWeek) => {
 	let events = [...Array(5).fill(0)].map((_, index) => <Event key={index} type={"empty"} />);
 	for (const { course, type, room, nth_lesson } of data.upcoming[dayOfWeek].events) {
 		const courseDetails = data.courses[course];
@@ -19,8 +18,13 @@ const Dashboard = ({ data, dayOfWeek, daysForward }) => {
 		);
 	}
 
-	return <div className="dashboard-grid">{<Column>{events}</Column>}</div>;
-	// return <Column>{events}</Column>;
+	return events;
+};
+
+const Dashboard = ({ data, dayOfWeek, daysForward }) => {
+	let events = useMemo(() => getEvents(data, dayOfWeek), [data, dayOfWeek]);
+
+	return <Column>{events}</Column>;
 };
 
 Dashboard.propTypes = {};
