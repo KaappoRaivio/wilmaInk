@@ -1,0 +1,53 @@
+.parent {
+	width: 100%;
+	height: 100%;
+	/*display: grid;*/
+	/*grid-template-columns: repeat(8, 1fr);*/
+	/*grid-template-rows: repeat(7, 1fr);*/
+	/*grid-auto-flow: column;*/
+	position: absolute;
+	left: 0;
+	top:0;
+}
+
+.wrapper {
+	height: 100%;
+	position: absolute;
+	right: 0;
+	width: 1%;
+	/*display: grid;*/
+	border: 1px solid black;
+	/*grid-template-rows: repeat(365, 1fr);*/
+	/*grid-auto-flow: column;*/
+}
+
+.bar  {
+	z-index: 10;
+	width: 100%;
+	background-color: black;
+
+	background-image:
+		linear-gradient(45deg, #fff 25%, transparent 0%),
+		linear-gradient(135deg, #fff 25%, transparent 0%),
+		linear-gradient(45deg, transparent 75%, #fff 75%),
+		linear-gradient(135deg, transparent 75%, #fff 75%);
+	background-size: 4px 4px;
+	background-position: 0 0, 2px 0, 2px -2px, 0 2px;
+}
+
+.centered {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/*border: 1px solid black;*/
+	/*background: black;*/
+}
+
+.dot {
+	color: black;
+	/*width: 1px;*/
+	/*height: 1px;*/
+	/*border: 0.5px solid black;*/
+	background: black;
+}
+

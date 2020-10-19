@@ -1,0 +1,26 @@
+[
+	{
+		"start": "2020-10-12",
+		"end": "2020-10-18",
+		"description": "Syysloma"
+	},
+	{
+		"start": "2020-12-22",
+		"end": "2021-1-7",
+		"description": "joululoma"
+	},
+	{
+		"start": "2021-2-22",
+		"end": "2021-2-26",
+		"description": "hiihtoloma"
+	},
+	{
+		"start": "2021-4-2",
+		"end": "2021-4-5",
+		"description": "Pääsiäinen"
+	},
+	{
+		"start": "2021-6-5",
+		"end": "2021-8-13"
+	}
+]

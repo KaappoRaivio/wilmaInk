@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import styles from "./css/App.module.css";
 import Row from "./Row";
+import LifeCounter from "./LifeCounter";
 
 const getNextWeekDay = skipDays => {
 	let currentDate = new Date();
@@ -40,7 +41,7 @@ const useRequest = url => {
 	const [error, setError] = useState(null);
 
 	useEffect(() => {
-		fetch("http://raivio.dy.fi:8080")
+		fetch("http://192.168.1.100:8080")
 			.then(res => {
 				return res.json();
 			})
@@ -68,18 +69,21 @@ const App = ({ onLanguageChanged }) => {
 		return <>...</>;
 	} else {
 		return (
-			<div className={styles.wrapper}>
-				<div className={styles.dateTitle}>
-					<Row>
-						<FormattedDate date={date} />
-						<div>{t("homework")}</div>
-						<div>{t("lesson_diary")}</div>
-					</Row>
+			<>
+				<div className={styles.wrapper}>
+					<div className={styles.dateTitle}>
+						<Row>
+							<FormattedDate date={date} />
+							<div>{t("homework")}</div>
+							<div>{t("lesson_diary")}</div>
+						</Row>
+					</div>
+					<div className={styles.dashboard}>
+						<Dashboard data={data} dayOfWeek={date.getDay_correct()} daysForward={0} />
+					</div>
 				</div>
-				<div className={styles.dashboard}>
-					<Dashboard data={data} dayOfWeek={date.getDay_correct()} daysForward={0} />
-				</div>
-			</div>
+				{/*<LifeCounter date={new Date(2020, 7, 13)} />*/}
+			</>
 		);
 	}
 };

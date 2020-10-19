@@ -11,8 +11,8 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	/*font-family: "Liberation Mono";*/
 	/*font-family: "Courier New";*/
-	overflow: hidden
-;
+	/*overflow: hidden*/
+/*;*/
 	height: 100vh;
 }
 

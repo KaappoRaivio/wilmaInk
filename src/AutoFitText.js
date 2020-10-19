@@ -9,27 +9,30 @@ const AutoFitText = ({ initialFontSize, children, className, onFontSizeFound, un
 	const actualContainer = useRef(React.createRef());
 
 	const [{ fontSize, executing }, dispatch] = useReducer(reducer, { fontSize: initialFontSize, executing: true });
+	// useEffect(() => {
+	const target = targetContainer.current;
+	const actual = actualContainer.current;
 
-	useEffect(() => {
-		const target = targetContainer.current;
-		const actual = actualContainer.current;
-
-		if (actual && target && executing && !uniformFontSize) {
-			let offset = target.offsetHeight - actual.offsetHeight;
-			if (offset < 0) {
-				dispatch({ fontSize: Math.max(fontSize - 0.1, 0) });
-			} else {
-				dispatch({ executing: false });
-				onFontSizeFound(fontSize);
-			}
+	console.log(actual, target, executing, uniformFontSize);
+	if (actual && target && executing && !uniformFontSize) {
+		let offset = target.offsetHeight - actual.offsetHeight;
+		console.log(offset, fontSize);
+		if (offset < 0) {
+			dispatch({ fontSize: Math.max(fontSize - 1, 0) });
+		} else {
+			dispatch({ executing: false });
+			onFontSizeFound(fontSize);
+			// console.log(fontSize);
 		}
-	}, [actualContainer, executing, fontSize, onFontSizeFound, targetContainer, uniformFontSize]);
-
+	}
+	console.log("moi");
+	// }, [executing, fontSize, uniformFontSize]);
 	return (
 		<div
 			style={{
-				visibility: executing ? "hidden" : "visible",
-				fontSize: `${uniformFontSize || fontSize}px`,
+				// visibility: executing ? "hidden" : "visible",
+				// fontSize: `${uniformFontSize || fontSize}px`,
+				fontSize: `${fontSize}px`,
 			}}
 			className={className}
 			ref={targetContainer}>

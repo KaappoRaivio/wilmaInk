@@ -8,7 +8,7 @@ const formatDate = date => {
 const FormattedDate = ({ date }) => {
 	const { t } = useTranslation();
 
-	return <>{`${t("weekday_" + date.getDay())} ${formatDate(date)}`}</>;
+	return <>{`${t("weekday_" + date.getDay_correct())} ${formatDate(date)}`}</>;
 };
 
 FormattedDate.propTypes = {};
