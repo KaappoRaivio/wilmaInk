@@ -41,7 +41,7 @@ const Event = ({ type, course, room, courseDetails }) => {
 					</div>
 				</div>
 				<AutoFitText
-					initialFontSize={18}
+					initialFontSize={30}
 					className={styles.homework}
 					uniformFontSize={uniformFontSize}
 					onFontSizeFound={onFontSizeFound}>

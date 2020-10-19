@@ -7,7 +7,7 @@ const Row = props => {
 		<div className={styles.row}>
 			<div className={`${styles.column1}`}>{props.children[0]}</div>
 			<div className={`${styles.column2}`}>{props.children[1]}</div>
-			<div className={`${styles.column3}`}>{/*props.children[2]*/}</div>
+			<div className={`${styles.column3}`}>{props.children[2]}</div>
 		</div>
 	);
 };
