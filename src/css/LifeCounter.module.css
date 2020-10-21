@@ -1,6 +1,6 @@
 .parent {
-	width: 100%;
-	height: 100%;
+	width: 400px;
+	height: 300px;
 	/*display: grid;*/
 	/*grid-template-columns: repeat(8, 1fr);*/
 	/*grid-template-rows: repeat(7, 1fr);*/

@@ -28,9 +28,11 @@ Date.prototype.getDay_correct = function () {
 const useUrlParams = () => {
 	return useMemo(() => {
 		const params = new URL(window.location.href).searchParams;
+		console.log(params.get("url"));
 		return {
 			language: params.get("lang") || "fi",
 			date: getNextWeekDay(parseInt(params.get("skipDays"), 10) || 0),
+			dataUrl: params.get("url") || "http://raivio.dy.fi:8080/",
 		};
 	}, []);
 };
@@ -41,7 +43,7 @@ const useRequest = url => {
 	const [error, setError] = useState(null);
 
 	useEffect(() => {
-		fetch("http://192.168.1.100:8080")
+		fetch(url)
 			.then(res => {
 				return res.json();
 			})
@@ -57,8 +59,9 @@ const useRequest = url => {
 };
 
 const App = ({ onLanguageChanged }) => {
-	const { date, language } = useUrlParams();
-	const { data, loading, error } = useRequest("http://raivio.dy.fi:8080");
+	const { date, language, dataUrl } = useUrlParams();
+	console.log(dataUrl);
+	const { data, loading, error } = useRequest(dataUrl);
 	const { t } = useTranslation();
 
 	useEffect(() => onLanguageChanged(language), [language, onLanguageChanged]);
@@ -81,8 +84,8 @@ const App = ({ onLanguageChanged }) => {
 					<div className={styles.dashboard}>
 						<Dashboard data={data} dayOfWeek={date.getDay_correct()} daysForward={0} />
 					</div>
+					<LifeCounter date={new Date(2020, 7, 13)} />
 				</div>
-				{/*<LifeCounter date={new Date(2020, 7, 13)} />*/}
 			</>
 		);
 	}
