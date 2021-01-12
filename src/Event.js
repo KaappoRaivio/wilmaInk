@@ -7,7 +7,6 @@ import AutoFitText from "./AutoFitText";
 
 const reducer = (state, fontSize) => {
 	const array = state.array.concat(fontSize);
-	console.log(array, fontSize);
 	if (array.length > 1) {
 		return { uniformFontSize: Math.min(...array), array };
 	} else {
