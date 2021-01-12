@@ -1,68 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#WilmaInk
+WilmaInk is a sister project of [Wilmacrawler](https://github.com/KaappoRaivio/wilmacrawler/), which it uses as a back-end. WilmaInk presents the data in a form that can be rendered on an e-ink display. 
+This means limited resution, and very limited color palette, in my e-ink display's case 3 colors: black, white, and red:
 
-## Available Scripts
 
-In the project directory, you can run:
+<div style="text-align:center"><img src="assets/1.png" /></div>
 
-### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Currently, it displays your schedule for the next day, along with associated homework and lesson diary.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+This project is mainly intended to be used with e-ink displays, which explains the non-responsive rendering, and limited color palette. 
 
-### `yarn test`
+##Motivation 
+As 2020 struck, I, along with other high school students, found myself sitting at the computer all day. As I was opening the same web resources used for learning day after day, the need to wait for the various webpages to load really started to grind on me. This is why I decided to make this contraption. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In my personal use, it has decreased my need to open the Wilma webpage by 90 % or so. 
 
-### `yarn build`
+##Usage
+This project can be built just like any other `create-react-app`:
+1. Clone the repor and `cd` into it.
+2. Run `yarn install`/`npm install`.
+3. Run `yarn build`/`npm run build`.
+4. The `build/` directory now contains the static html, css and JS that can be hosted by any web server program, such as Apache or Nginx. 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You can pass several parameters in the URL, which change various things:
+####`lang`
+Changes the language of the texts. Please note that data coming from the API isn't affected. 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+currently supported values: `{"en, "fi"}`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+####`skipDays`
+Can be used to change the day which will be shown.
 
-### `yarn eject`
+currently supported values: `[0..5]`, please keep in mind that only values belonging to the same week will show data.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+####`url` 
+Set the back-end url, which depends on where you are hosting your [Wilmacrawler](https://github.com/KaappoRaivio/wilmacrawler/) instance.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+currently supported values: a valid URL
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+####`renderWidth` and `renderHeight`
+Set the width and height of the rendered image.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+currently supported values: a number followed by any valid css unit. 

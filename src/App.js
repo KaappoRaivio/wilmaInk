@@ -31,7 +31,7 @@ const useUrlParams = () => {
 		return {
 			language: params.get("lang") || "fi",
 			date: getNextWeekDay(parseInt(params.get("skipDays"), 10) || 0),
-			dataUrl: params.get("url") || "http://raivio.dy.fi:8080/",
+			dataUrl: params.get("url") || "http://localhost:8080/",
 			dimensions: { width: params.get("renderWidth") || 400, height: params.get("renderHeight") || 300 },
 		};
 	}, []);
