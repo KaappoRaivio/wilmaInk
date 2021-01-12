@@ -5,7 +5,7 @@ import holidays from "./data/holidays.json";
 
 const daysBetween = (d1, d2) => Math.round((d1 - d2) / (24 * 60 * 60 * 1000));
 
-const LifeCounter = ({ date }) => {
+const LifeCounter = ({ date, width, height }) => {
 	const days = useMemo(() => daysBetween(new Date(), date), [date]);
 
 	const holidayRanges = holidays.map(item => {
@@ -15,11 +15,12 @@ const LifeCounter = ({ date }) => {
 	});
 
 	return (
-		<div className={styles.parent}>
+		<div className={styles.parent} style={{ width, height }}>
 			<div className={styles.wrapper}>
 				<div className={styles.bar} style={{ height: `${((days - 1) / 365) * 100}%` }} />
 				{holidayRanges.map(item => (
 					<div
+						key={item.start}
 						style={{
 							left: 0,
 							width: "100%",

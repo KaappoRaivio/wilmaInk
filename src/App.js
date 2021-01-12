@@ -28,11 +28,11 @@ Date.prototype.getDay_correct = function () {
 const useUrlParams = () => {
 	return useMemo(() => {
 		const params = new URL(window.location.href).searchParams;
-		console.log(params.get("url"));
 		return {
 			language: params.get("lang") || "fi",
 			date: getNextWeekDay(parseInt(params.get("skipDays"), 10) || 0),
 			dataUrl: params.get("url") || "http://raivio.dy.fi:8080/",
+			dimensions: { width: params.get("renderWidth") || 400, height: params.get("renderHeight") || 300 },
 		};
 	}, []);
 };
@@ -48,7 +48,6 @@ const useRequest = url => {
 				return res.json();
 			})
 			.then(data => {
-				console.log(data);
 				setData(data);
 				setLoading(false);
 			})
@@ -59,8 +58,7 @@ const useRequest = url => {
 };
 
 const App = ({ onLanguageChanged }) => {
-	const { date, language, dataUrl } = useUrlParams();
-	console.log(dataUrl);
+	const { date, language, dataUrl, dimensions } = useUrlParams();
 	const { data, loading, error } = useRequest(dataUrl);
 	const { t } = useTranslation();
 
@@ -73,7 +71,7 @@ const App = ({ onLanguageChanged }) => {
 	} else {
 		return (
 			<>
-				<div className={styles.wrapper}>
+				<div className={styles.wrapper} style={{ width: dimensions.width, height: dimensions.height }}>
 					<div className={styles.dateTitle}>
 						<Row>
 							<FormattedDate date={date} />
@@ -84,7 +82,7 @@ const App = ({ onLanguageChanged }) => {
 					<div className={styles.dashboard}>
 						<Dashboard data={data} dayOfWeek={date.getDay_correct()} daysForward={0} />
 					</div>
-					<LifeCounter date={new Date(2020, 7, 13)} />
+					<LifeCounter width={dimensions.width} height={dimensions.height} date={new Date(2020, 7, 13)} />
 				</div>
 			</>
 		);
