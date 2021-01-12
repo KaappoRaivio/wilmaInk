@@ -1,5 +1,7 @@
 #WilmaInk
+
 WilmaInk is a sister of my other project [Wilmacrawler](https://github.com/KaappoRaivio/wilmacrawler/), which it uses as a back-end. WilmaInk presents the data in a form that can be rendered on an e-ink display. 
+
 This means limited resution, and very limited color palette, in my e-ink display's case 3 colors: black, white, and red:
 
 
